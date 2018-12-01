@@ -9,3 +9,7 @@ So during my time on Driveclub one of my biggest issues was command line argumen
 # Solution
 
 For our next project we had a unique opportunity of starting a fresh code base. I came up with this. It was a more strict solution where you effectively register known command line arguments and give a brief description. It was case insensitive and it wouldn’t care about how many dash (-) identifiers an argument had. It would instantly fatal error on boot if an argument you gave the program was not known (spelt wrong, didn’t exist). This saved so much time. Coders had a code file where all known arguments were listed, separated by section (rendering, metagame, server, etc). QA had an always up to date list of all known arguments with each build via the output.
+
+In my solution I've created a clean static interface using built in types to avoid focing dependencies. I've kept the header file free of include files, all includes are in the c++ for containers. Left some comments in the cpp to replace debugbreak with custom fatal error, same with the cassert.
+
+Thanks.
