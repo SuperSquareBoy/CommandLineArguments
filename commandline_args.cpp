@@ -136,7 +136,7 @@ namespace cmd
 		}
 
 		printf( "\n[CommandLineArgs]:\nCurrent:\n" );
-		for( auto it = g_programCommandArgs.begin(); it != g_programCommandArgs.end(); ++it )
+		for( ProgramArgs::iterator it = g_programCommandArgs.begin(); it != g_programCommandArgs.end(); ++it )
 		{
 			printf( "%s -> %s\n", it->first, it->second );
 		}
