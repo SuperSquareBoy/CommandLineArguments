@@ -9,10 +9,10 @@ static cmd::WhiteList g_whiteList[] =
 	{ "inputFile",				"Input a file to output logs" },
 	{ "unlockall",				"Use this to unlock everything for the user including Career and Loot." }
 };
-static int g_lowWhiteListSize = sizeof( g_whiteList ) / sizeof( g_whiteList[0] );
+static unsigned int g_lowWhiteListSize = sizeof( g_whiteList ) / sizeof( g_whiteList[0] );
 
 
-int main( int argc, char** argv )
+int main( unsigned int argc, char** argv )
 {
 	cmd::CommandLineArgs::InitaliseCommandArgs();
 

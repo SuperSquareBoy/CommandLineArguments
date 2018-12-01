@@ -17,9 +17,9 @@ namespace cmd
 		static void InitaliseCommandArgs();
 
 		// Add all your known commands.
-		static void AddWhiteList( const WhiteList whiteList[], int arraySize );
+		static void AddWhiteList( const WhiteList whiteList[], unsigned int arraySize );
 		// Populate the arguments passed into the program.
-		static void ParseArgs( int argC, char* const* argV, bool fatalIfNotFound );
+		static void ParseArgs( unsigned int argC, char* const* argV, bool fatalIfNotFound );
 
 		static bool HasArgument( const char* pKey );
 		static bool FindStringValue( const char* pKey, const char*& outString );

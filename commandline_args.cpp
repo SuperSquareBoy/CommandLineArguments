@@ -38,25 +38,25 @@ namespace cmd
 		g_whiteList.reserve( g_maxNumAllowedCommandArgs );
 	}
 
-	void CommandLineArgs::AddWhiteList( const WhiteList whiteList[], int arraySize )
+	void CommandLineArgs::AddWhiteList( const WhiteList whiteList[], unsigned int arraySize )
 	{
-		for ( int i = 0; i < arraySize; ++i )
+		for ( unsigned int i = 0; i < arraySize; ++i )
 		{
 			g_whiteList.push_back( whiteList[i] );
 			StripOffIdentifer( g_whiteList[ (unsigned int)g_whiteList.size() - 1 ].m_pCommand );
 		}
 	}
 
-	void CommandLineArgs::ParseArgs( int argC, char* const* argV, bool fatalIfNotFound )
+	void CommandLineArgs::ParseArgs( unsigned int argC, char* const* argV, bool fatalIfNotFound )
 	{
-		for ( int argIndex = 1; argIndex < argC; ++argIndex )
+		for ( unsigned int argIndex = 1; argIndex < argC; ++argIndex )
 		{
 			const char* pKey = nullptr;
 			const char* pValue = nullptr;
 
 			if ( strstr( argV[ argIndex ], g_argIdentifer ) != 0 )
 			{
-				for ( int whitelistIdx = 0; whitelistIdx < (int)g_whiteList.size(); ++whitelistIdx )
+				for ( unsigned int whitelistIdx = 0; whitelistIdx < (int)g_whiteList.size(); ++whitelistIdx )
 				{
 					const char* pArgCopy = argV[ argIndex ];
 					StripOffIdentifer( pArgCopy );
@@ -83,7 +83,7 @@ namespace cmd
 				}
 
 				// Grab our value if we have one
-				int next = argIndex + 1;
+				const unsigned int next = argIndex + 1;
 				if ( next < argC && ( strstr( argV[ next ], g_argIdentifer ) == 0) )
 				{
 					pValue = argV[ next ];
