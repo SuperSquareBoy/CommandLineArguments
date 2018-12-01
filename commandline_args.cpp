@@ -47,7 +47,7 @@ namespace cmd
 		}
 	}
 
-	void CommandLineArgs::ParseArgs( int argC, char** argV, bool fatalIfNotFound )
+	void CommandLineArgs::ParseArgs( int argC, char* const* argV, bool fatalIfNotFound )
 	{
 		for ( int argIndex = 1; argIndex < argC; ++argIndex )
 		{
