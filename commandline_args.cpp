@@ -130,7 +130,7 @@ namespace cmd
 	{
 		printf( "[CommandLineArgs]:\nAvailable:\n" );
 
-		for( int i = 0; i < (int)g_whiteList.size(); ++i )
+		for( unsigned int i = 0; i < (unsigned int)g_whiteList.size(); ++i )
 		{
 			printf( "%s -> %s\n", g_whiteList[ i ].m_pCommand, g_whiteList[ i ].m_pDescription );
 		}
