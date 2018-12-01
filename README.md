@@ -1,6 +1,7 @@
 # CommandLineArguments
 
-Easy self documented command line arguments 
+Easy self documented command line arguments
+
 Clean, simple interface and readable code.
 
 # The Problem
